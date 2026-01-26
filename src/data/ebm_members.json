@@ -1,0 +1,56 @@
+[
+  {
+    "id": "ebm-001",
+    "name": "Technical Lead",
+    "role": "Technical Lead",
+    "department": "CSE",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "tech@srkrcsi.org"
+  },
+  {
+    "id": "ebm-002",
+    "name": "Event Coordinator",
+    "role": "Event Coordinator",
+    "department": "IT",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "events@srkrcsi.org"
+  },
+  {
+    "id": "ebm-003",
+    "name": "Design Lead",
+    "role": "Design Lead",
+    "department": "CSE",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "design@srkrcsi.org"
+  },
+  {
+    "id": "ebm-004",
+    "name": "Social Media Manager",
+    "role": "Social Media Manager",
+    "department": "ECE",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "social@srkrcsi.org"
+  },
+  {
+    "id": "ebm-005",
+    "name": "Content Writer",
+    "role": "Content Writer",
+    "department": "CSE",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "content@srkrcsi.org"
+  },
+  {
+    "id": "ebm-006",
+    "name": "Documentation Lead",
+    "role": "Documentation Lead",
+    "department": "IT",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "docs@srkrcsi.org"
+  }
+]
