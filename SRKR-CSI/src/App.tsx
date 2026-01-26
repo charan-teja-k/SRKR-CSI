@@ -14,9 +14,13 @@ const App: React.FC = () => {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen overflow-hidden no-scrollbar">
+      {/* 
+         FIXED: Changed 'overflow-hidden' to 'overflow-x-hidden'. 
+         'overflow-hidden' prevents scrolling completely. 
+      */}
+      <div className="flex flex-col min-h-screen overflow-x-hidden">
         <Navbar />
-        <main>
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
