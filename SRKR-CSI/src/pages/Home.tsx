@@ -114,10 +114,10 @@ const Home: React.FC = () => {
     });
 
     return (
-        <div ref={containerRef} className="relative min-h-screen w-full overflow-x-hidden selection:bg-blue-500/30">
+        <div ref={containerRef} className="relative min-h-screen min-w-full overflow-x-hidden selection:bg-blue-500/30">
 
             {/* --- 1. Fixed Interactive Background --- */}
-            <div className="fixed inset-0 z-0 bg-gray-900 pointer-events-auto">
+            <div className="fixed inset-0 z-0 bg-gray-900 pointer-events-auto px-0">
                 <PixelBlast
                     variant="square"
                     pixelSize={6}
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
             <div className="relative z-10 pointer-events-none">
 
                 {/* Hero Section */}
-                <section className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20">
+                <section className="relative min-h-screen flex flex-col items-center justify-center  pt-20">
                     <motion.div
                         style={{ y }}
                         initial="hidden"
@@ -157,11 +157,11 @@ const Home: React.FC = () => {
 
                         <motion.h1
                             variants={fadeInUp}
-                            className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 leading-[0.9] tracking-tighter"
+                            className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-[0.9] tracking-tighter"
                         >
                             SRKR <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 animate-gradient-x">CSI</span>
                             <br />
-                            <span className="text-4xl md:text-6xl lg:text-7xl text-gray-400 font-medium block mt-2">
+                            <span className="text-4xl md:text-5xl lg:text-6xl text-gray-400 font-medium block mt-2">
                                 Student Chapter
                             </span>
                         </motion.h1>
@@ -232,15 +232,15 @@ const Home: React.FC = () => {
                             icon={Award}
                             title="Leadership Core"
                             desc="Go beyond coding. Learn to manage teams, organize large-scale summits, and drive initiatives from scratch."
-                            colorClass="bg-orange-600"
+                            colorClass="bg-blue-600"
                         />
                     </motion.div>
                 </section>
 
                 {/* Footer Section - Moved inside the flow but pointer-events enabled */}
-                <div className="relative pointer-events-auto mt-20">
+                {/* <div className="relative pointer-events-auto w-full">
                     <KineticFooter />
-                </div>
+                </div> */}
 
             </div>
         </div>

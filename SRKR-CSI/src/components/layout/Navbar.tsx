@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
         { path: '/', label: 'Home' },
         { path: '/about', label: 'About' },
         { path: '/events', label: 'Events' },
+        { path: '/members', label: 'Our Team' },
     ];
 
     // Handle Scroll Effect
