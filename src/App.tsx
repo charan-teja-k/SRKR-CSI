@@ -4,6 +4,7 @@ import { Navbar, Footer } from './components/layout';
 import { Home, About, Events, EventDetails, Members, NotFound } from './pages';
 import { useScrollToTop } from './hooks';
 import './App.css';
+import KineticFooter from './components/KineticFooter';
 
 const ScrollToTop: React.FC = () => {
   useScrollToTop();
@@ -30,7 +31,7 @@ const App: React.FC = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
-        <Footer />
+        <KineticFooter />
       </div>
     </Router>
   );

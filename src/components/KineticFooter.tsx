@@ -10,15 +10,15 @@ const KineticFooter = () => {
   const rows = 3;
   const cols = 3; 
   // Pattern: C S I repeating
-  const chars = ["C", "S", "I", "C", "S", "I", "C", "S", "I"];
+  const chars = ["S", "E", "X", " ", "Y", " ", "H", "O", "D"];
 
   return (
-    <footer className="relative bg-[#020617] text-white overflow-hidden py-24 px-0 md:px-12 border-t border-white/5">
+    <footer className="relative bg-white/1  backdrop-blur-md text-white overflow-hidden pt-10 px-0  border-t border-white/5">
       
-      <div className="min-w-full mx-auto flex flex-col lg:flex-row gap-16">
+      <div className="min-w-full mx-auto flex flex-col lg:flex-row gap-2"> 
         
         {/* LEFT COLUMN: Links & Info (Unchanged) */}
-        <div className="w-full lg:w-1/2 z-10 flex flex-col justify-between h-full min-h-[400px]">
+        <div className="lg:w-3/4 z-10 flex flex-col justify-between h-full min-h-[400px] mx-auto">
           <div>
             <h2 className="text-5xl md:text-6xl font-bold mb-10 tracking-tight leading-[1.1]">
               Let there be <br />
@@ -27,13 +27,13 @@ const KineticFooter = () => {
               </span>
             </h2>
 
-            <div className="grid grid-cols-2 gap-x-12 gap-y-6 mb-16 max-w-sm">
-              <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-2 gap-x-2 gap-y-6 mb-16 ">
+              <div className="flex flex-col gap-4 justify-start items-start mx-auto">
                  <Link to="/about" className="hover:translate-x-1 hover:text-blue-400 transition-all duration-300 text-gray-400 font-medium">About Us</Link>
                  <Link to="/events" className="hover:translate-x-1 hover:text-blue-400 transition-all duration-300 text-gray-400 font-medium">Events</Link>
                  <Link to="/members" className="hover:translate-x-1 hover:text-blue-400 transition-all duration-300 text-gray-400 font-medium">Our Team</Link>
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-4 justify-start items-start mx-auto">
                  <Link to="/privacy" className="hover:translate-x-1 hover:text-blue-400 transition-all duration-300 text-gray-400 font-medium">Privacy Policy</Link>
                  <Link to="/terms" className="hover:translate-x-1 hover:text-blue-400 transition-all duration-300 text-gray-400 font-medium">Terms of Use</Link>
                  <Link to="/contact" className="hover:translate-x-1 hover:text-blue-400 transition-all duration-300 text-gray-400 font-medium">Contact</Link>
@@ -41,7 +41,7 @@ const KineticFooter = () => {
             </div>
           </div>
 
-          <div className="space-y-8">
+          <div className="space-y-8 mx-auto">
             <div className="flex gap-5">
               {[Linkedin, Instagram, Github, Twitter].map((Icon, i) => (
                 <a key={i} href="#" className="w-12 h-12 border border-white/10 bg-white/5 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:scale-110 transition-all duration-300 text-gray-300 hover:text-white group">
@@ -49,7 +49,7 @@ const KineticFooter = () => {
                 </a>
               ))}
             </div>
-            <div className="text-sm text-gray-500 font-medium tracking-wide">
+            <div className="fixed bottom-0 text-sm text-gray-500 font-medium tracking-wide mx-auto">
               © {currentYear} SRKR CSI Student Chapter.
             </div>
           </div>
@@ -98,7 +98,8 @@ const FlipChar = ({ char, delay }: { char: string, delay: number }) => {
       
       // Dynamic Styles based on hover
       animate={{ 
-        rotateY: isHovered ? 180 : 0, 
+        rotate: isHovered ? 180 : 0, 
+        // rotate: isHovered ? 180 : 0, 
         backgroundColor: isHovered ? "rgba(37, 99, 235, 1)" : "rgba(255, 255, 255, 0.03)", // Blue vs Glass
         color: isHovered ? "#ffffff" : "rgba(255, 255, 255, 0.8)",
         scale: isHovered ? 1.05 : 1,
