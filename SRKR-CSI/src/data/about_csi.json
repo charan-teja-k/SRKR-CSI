@@ -1,0 +1,34 @@
+{
+  "name": "Computer Society of India - SRKR Student Chapter",
+  "shortName": "SRKR CSI",
+  "established": "2010",
+  "college": "SRKR Engineering College",
+  "location": "Bhimavaram, Andhra Pradesh, India",
+  "mission": "To foster technical excellence among students and bridge the gap between academia and industry through workshops, seminars, and hands-on projects.",
+  "vision": "To be a premier student chapter that nurtures innovation, promotes collaboration, and prepares students for the challenges of the ever-evolving technology landscape.",
+  "history": [
+    {
+      "year": "2010",
+      "milestone": "SRKR CSI Student Chapter was established"
+    },
+    {
+      "year": "2015",
+      "milestone": "Conducted first national-level technical symposium"
+    },
+    {
+      "year": "2020",
+      "milestone": "Successfully transitioned to virtual events during pandemic"
+    },
+    {
+      "year": "2024",
+      "milestone": "Celebrated 500+ active members milestone"
+    }
+  ],
+  "objectives": [
+    "Organize technical workshops and seminars",
+    "Conduct coding competitions and hackathons",
+    "Provide industry exposure through guest lectures",
+    "Foster peer-to-peer learning and collaboration",
+    "Bridge the gap between academic learning and industry requirements"
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "faculty-001",
+    "name": "Dr. Faculty Coordinator",
+    "role": "Faculty Coordinator",
+    "department": "CSE",
+    "designation": "Associate Professor",
+    "image": "/images/members/placeholder.jpg",
+    "email": "faculty@srkr.ac.in"
+  },
+  {
+    "id": "faculty-002",
+    "name": "Prof. Co-Coordinator",
+    "role": "Co-Coordinator",
+    "department": "CSE",
+    "designation": "Assistant Professor",
+    "image": "/images/members/placeholder.jpg",
+    "email": "cocoordinator@srkr.ac.in"
+  }
+]

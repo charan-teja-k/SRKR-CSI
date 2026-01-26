@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sbm-001",
+    "name": "Student President",
+    "role": "President",
+    "department": "CSE",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "president@srkrcsi.org"
+  },
+  {
+    "id": "sbm-002",
+    "name": "Vice President",
+    "role": "Vice President",
+    "department": "CSE",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "vp@srkrcsi.org"
+  },
+  {
+    "id": "sbm-003",
+    "name": "General Secretary",
+    "role": "General Secretary",
+    "department": "IT",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "secretary@srkrcsi.org"
+  },
+  {
+    "id": "sbm-004",
+    "name": "Treasurer",
+    "role": "Treasurer",
+    "department": "CSE",
+    "image": "/images/members/placeholder.jpg",
+    "linkedin": "https://linkedin.com/in/",
+    "email": "treasurer@srkrcsi.org"
+  }
+]
