@@ -226,7 +226,7 @@ const Home: React.FC = () => {
                             icon={Users}
                             title="Elite Network"
                             desc="Access a curated network of alumni at top product companies and connect with peers who share your drive."
-                            colorClass="bg-purple-600"
+                            colorClass="bg-blue-600"
                         />
                         <FeatureCard
                             icon={Award}

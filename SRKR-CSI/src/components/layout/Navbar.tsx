@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
     // Handle Scroll Effect
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 10);
+            setScrolled(window.scrollY > 25);
         };
 
         // 1. Check IMMEDIATELY on mount (fixes the refresh issue)
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
             ? 'bg-[#030817] border-[#d4defa]/10'
             : scrolled
                 ? 'bg-[#030817]/90 backdrop-blur-md border-[#d4defa]/10 shadow-lg'
-                : 'bg-transparent border-transparent'
+                : 'bg-[#030817]/40 border-transparent'
         }`;
 
     return (
