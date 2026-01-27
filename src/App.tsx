@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navbar, Footer } from './components/layout';
 import { Home, About, Events, EventDetails, Members, NotFound } from './pages';
 import { useScrollToTop } from './hooks';
+import JoinCSI from './pages/JoinCSI';
 import './App.css';
 import KineticFooter from './components/KineticFooter';
 
@@ -28,6 +29,7 @@ const App: React.FC = () => {
             <Route path="/events" element={<Events />} />
             <Route path="/events/:id" element={<EventDetails />} />
             <Route path="/members" element={<Members />} />
+            <Route path="/join" element={<JoinCSI />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
