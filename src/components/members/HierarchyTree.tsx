@@ -20,8 +20,8 @@ const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
         alt={member.name}
         className="w-20 h-20 rounded-full border-4 border-blue-200 object-cover"
       />
-      <p className="mt-2 font-medium text-gray-900 text-sm text-center">{member.name}</p>
-      <p className="text-xs text-blue-600">{member.role}</p>
+      <p className="mt-2 font-medium text-white-100 text-sm text-center">{member.name}</p>
+      <p className="text-xs text-white-600">{member.role}</p>
     </div>
   );
 
@@ -29,7 +29,7 @@ const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
     <div className="flex flex-col items-center space-y-12">
       {/* Faculty */}
       <div className="text-center">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4">Faculty Coordinators</h3>
+        <h3 className="text-lg font-semibold text-white-700 mb-4">Faculty Coordinators</h3>
         <div className="flex flex-wrap justify-center gap-8">
           {faculty.map((member, index) => (
             <MemberNode key={index} member={member} />
@@ -42,7 +42,7 @@ const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
 
       {/* SBM */}
       <div className="text-center">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4">Senior Body Members</h3>
+        <h3 className="text-lg font-semibold text-white-700 mb-4">Senior Body Members</h3>
         <div className="flex flex-wrap justify-center gap-8">
           {sbm.map((member, index) => (
             <MemberNode key={index} member={member} />
@@ -55,7 +55,7 @@ const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
 
       {/* EBM */}
       <div className="text-center">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4">Executive Body Members</h3>
+        <h3 className="text-lg font-semibold text-white-700 mb-4">Executive Body Members</h3>
         <div className="flex flex-wrap justify-center gap-8 max-w-4xl">
           {ebm.map((member, index) => (
             <MemberNode key={index} member={member} />
