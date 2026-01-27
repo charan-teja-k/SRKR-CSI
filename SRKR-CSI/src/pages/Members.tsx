@@ -35,7 +35,7 @@ const Members: React.FC = () => {
         {/* Header Section */}
         <div className="text-white mb-8 px-4">
           <div className="text-center">
-            <h1 className="text-3xl md:text-5xl font-bold font-['Poppins'] mb-4 tracking-tight drop-shadow-lg leading-tight">
+            <h1 className="text-3xl mt-8 md:text-5xl font-bold font-['Poppins'] mb-4 tracking-tight drop-shadow-lg leading-tight">
               Leadership & <br className="md:hidden" /> Core Committee
             </h1>
             <p className="text-sm md:text-xl text-gray-300 font-['Inter'] max-w-2xl mx-auto leading-relaxed">

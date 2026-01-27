@@ -20,17 +20,17 @@ const KineticFooter = () => {
   ];
 
   return (
-    <footer className="relative bg-white/1  backdrop-blur-md text-white overflow-hidden pt-10 px-0  border-t border-white/5">
+    <footer className="relative bg-[#030817]/40  backdrop-blur-md text-white overflow-hidden pt-10 px-0  border-t border-white/5">
       
       <div className="min-w-full mx-auto flex flex-col lg:flex-row gap-2"> 
         
         {/* LEFT COLUMN: Links & Info (Unchanged) */}
-        <div className="lg:w-3/4 z-10 flex flex-col justify-between h-full min-h-[400px] mx-auto">
+        <div className="flex flex-col justify-center text-center lg:w-3/4 z-10 flex flex-col justify-between h-full min-h-[400px] mx-auto">
           <div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-10 tracking-tight leading-[1.1]">
-              Let there be <br />
+            <h2 className="flex flex-col justify-center text-center text-5xl md:text-6xl font-bold mb-10 tracking-tight leading-[1.1]">
+              <br />Let there be <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
-                Innovation.
+                 Innovation.<br />
               </span>
             </h2>
 
@@ -68,7 +68,7 @@ const KineticFooter = () => {
           <div className="absolute inset-0 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none" />
           
           {/* UPDATED: 3 cols grid */}
-          <div className="grid grid-cols-3 gap-4 p-4 relative z-10">
+          <div className="grid grid-cols-3 gap-4 p-4 relative z-10 mr-28">
             {chars.map((char, i) => (
               <FlipChar key={i} char={char} delay={i * 0.05} />
             ))}
@@ -87,7 +87,7 @@ const FlipChar = ({ char, delay }: { char: string, delay: number }) => {
   return (
     <motion.div
       // Increased size for 3x3 layout: w-24 h-32 -> lg:w-32 lg:h-40
-      className="w-24 h-32 md:w-28 md:h-36 lg:w-32 lg:h-40 flex items-center justify-center text-5xl md:text-6xl lg:text-7xl font-black rounded-xl cursor-pointer select-none perspective-1000"
+      className="mx-auto w-24 h-32 md:w-28 md:h-36 lg:w-32 lg:h-40 flex items-center justify-center text-5xl md:text-6xl lg:text-7xl font-black rounded-xl cursor-pointer select-none perspective-1000"
       initial={{ rotateY: 90, opacity: 0 }} 
       whileInView={{ 
          rotateY: 0,

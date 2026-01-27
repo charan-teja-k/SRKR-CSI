@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
                             </Link>
                         ))}
 
-                        <Link to="/contact">
+                        <Link to="/join">
                             <button className="px-6 py-2.5 rounded-full bg-[#002a94] text-white text-sm font-semibold hover:bg-[#002a94]/80 hover:shadow-[0_0_20px_rgba(0,42,148,0.5)] transition-all duration-300 active:scale-95 border border-transparent hover:border-[#d4defa]/20">
                                 Join Us
                             </button>
@@ -132,7 +132,7 @@ const Navbar: React.FC = () => {
 
                     <div className="h-px bg-[#d4defa]/10 my-4" />
 
-                    <Link to="/contact" onClick={() => setIsOpen(false)}>
+                    <Link to="/join" onClick={() => setIsOpen(false)}>
                         <button className="w-full py-4 rounded-xl bg-gradient-to-r from-[#002a94] to-[#001a5c] text-white font-bold text-lg shadow-lg active:scale-95 transition-transform border border-[#d4defa]/10">
                             Join The Chapter
                         </button>
