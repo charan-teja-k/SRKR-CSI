@@ -10,7 +10,14 @@ const KineticFooter = () => {
   const rows = 3;
   const cols = 3; 
   // Pattern: C S I repeating
-  const chars = ["S", "E", "X", " ", "Y", " ", "H", "O", "D"];
+  const chars = ["C", "S", "I", "C", "S", "I", "C", "S", "I"];
+
+  const socialLinks = [
+    { Icon: Linkedin, url: "https://www.linkedin.com/company/csi-srkrit/posts/?feedView=all" },
+    { Icon: Instagram, url: "https://www.instagram.com/srkr_it_csi?igsh=MWN5a3R5MjltbWc3Nw==" },
+    { Icon: Github, url: "https://github.com/srkr-csi" },
+    { Icon: Twitter, url: "https://twitter.com/srkr_csi" },
+  ];
 
   return (
     <footer className="relative bg-white/1  backdrop-blur-md text-white overflow-hidden pt-10 px-0  border-t border-white/5">
@@ -43,8 +50,8 @@ const KineticFooter = () => {
 
           <div className="space-y-8 mx-auto">
             <div className="flex gap-5">
-              {[Linkedin, Instagram, Github, Twitter].map((Icon, i) => (
-                <a key={i} href="#" className="w-12 h-12 border border-white/10 bg-white/5 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:scale-110 transition-all duration-300 text-gray-300 hover:text-white group">
+              {socialLinks.map(({ Icon, url }, i) => (
+                <a key={i} href={url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 border border-white/10 bg-white/5 rounded-full flex items-center justify-center hover:bg-blue-600 hover:border-blue-500 hover:scale-110 transition-all duration-300 text-gray-300 hover:text-white group">
                   <Icon size={20} />
                 </a>
               ))}
@@ -86,7 +93,7 @@ const FlipChar = ({ char, delay }: { char: string, delay: number }) => {
          rotateY: 0,
          opacity: 1,
          transition: { 
-           duration: 0.8, 
+           duration: 1, 
            delay: delay,
            ease: [0.23, 1, 0.32, 1],
            repeat: 0 
