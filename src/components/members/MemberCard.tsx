@@ -30,8 +30,10 @@ const MemberCard: React.FC<MemberCardProps> = ({
       whileHover={{ y: -5 }}
       transition={{ type: "spring", stiffness: 300 }}
       className={cn(
-        // Base Layout
-        "relative group p-8 rounded-3xl overflow-hidden text-center",
+        // Base Layout - Fixed Width & Minimum Height for uniformity
+        "relative group flex flex-col items-center text-center",
+        "w-full max-w-[320px] h-full min-h-[450px]", // FIXED SIZE ENFORCED HERE
+        "p-8 rounded-3xl overflow-hidden",
         
         // Glassmorphism
         "bg-gray-900/40 backdrop-blur-xl border border-white/10",
@@ -44,17 +46,16 @@ const MemberCard: React.FC<MemberCardProps> = ({
       {/* --- 1. Center Glow Effect --- */}
       <div 
         className={cn(
-          // Centering: absolute position + inset-0 + flex/grid to center, or simple margin auto
           "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
-          "w-48 h-48 rounded-full blur-[100px]", // Increased blur for softer diffusion
+          "w-48 h-48 rounded-full blur-[100px]",
           "bg-blue-600",
-          "opacity-0 group-hover:opacity-50 transition-opacity duration-500", // Slightly higher opacity
-          "pointer-events-none" // Ensures it doesn't block clicks
+          "opacity-0 group-hover:opacity-50 transition-opacity duration-500",
+          "pointer-events-none"
         )} 
       />
 
       {/* --- 2. Image Section --- */}
-      <div className="relative w-48 h-48 mx-auto mb-6 group-inner transform transition-transform duration-300 group-hover:scale-105 border-4 border-white/10 rounded-full overflow-hidden shadow-lg">
+      <div className="relative w-40 h-40 mx-auto mb-6 flex-shrink-0 group-inner transform transition-transform duration-300 group-hover:scale-105 border-4 border-white/10 rounded-full overflow-hidden shadow-lg">
         <div className="absolute inset-0 rounded-full bg-blue-500/20 blur-md group-hover:blur-xl transition-all duration-300" />
         <img
           src={image}
@@ -63,24 +64,33 @@ const MemberCard: React.FC<MemberCardProps> = ({
         />
       </div>
 
-      {/* --- 3. Text Content --- */}
-      <div className="relative z-10">
-        <h3 className="text-2xl font-bold text-white mb-2 transition-all group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400">
-          {name}
-        </h3>
+      {/* --- 3. Text Content (Flex-grow to push footer down) --- */}
+      <div className="relative z-10 flex flex-col flex-grow w-full">
+        {/* Name: Fixed height to accommodate 2 lines if needed */}
+        <div className="h-16 flex items-center justify-center mb-1">
+            <h3 className="text-xl font-bold text-white transition-all group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 line-clamp-2 leading-tight">
+            {name}
+            </h3>
+        </div>
         
-        <p className="text-blue-400 font-medium tracking-wide mb-1">
-          {role}
-        </p>
+        {/* Role: Fixed height for 1-2 lines */}
+        <div className="h-10 flex items-start justify-center mb-1">
+            <p className="text-blue-400 font-medium tracking-wide text-sm line-clamp-2">
+            {role}
+            </p>
+        </div>
         
-        {department && (
-          <p className="text-sm text-gray-400 mb-6 font-light">
-            {department}
-          </p>
-        )}
+        {/* Department */}
+        <div className="h-6 mb-6">
+            {department && (
+            <p className="text-xs text-gray-400 font-light truncate">
+                {department}
+            </p>
+            )}
+        </div>
 
-        {/* --- 4. Social Actions --- */}
-        <div className="flex justify-center gap-4">
+        {/* --- 4. Social Actions (Always at bottom) --- */}
+        <div className="mt-auto flex justify-center gap-4">
           {linkedin && (
             <a
               href={linkedin}

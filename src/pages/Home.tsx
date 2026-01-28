@@ -158,13 +158,16 @@ const Home: React.FC = () => {
                         <motion.h1
                             variants={fadeInUp}
                             className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-[0.9] tracking-tighter"
-                        >
-                            SRKR <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 animate-gradient-x">CSI</span>
-                            <br />
-                            <span className="text-4xl md:text-5xl lg:text-6xl text-gray-400 font-medium block mt-2">
-                                Student Chapter
-                            </span>
-                        </motion.h1>
+>
+                            SRKR{' '}
+                            <span className="text-transparent bg-clip-text bg-[#2563EB] animate-gradient-x [-webkit-text-stroke:0.5px_white]">CSI</span>
+
+                                <br />
+                                <span className="text-4xl md:text-5xl lg:text-6xl text-gray-400 font-medium block mt-2">
+                                    Student Chapter
+                                </span>
+                            </motion.h1>
+
 
                         <motion.p
                             variants={fadeInUp}
