@@ -1,20 +1,38 @@
 [
   {
     "id": "faculty-001",
-    "name": "Dr. Faculty Coordinator",
-    "role": "Faculty Coordinator",
-    "department": "CSE",
+    "name": "Dr. K. Kishore Raju",
+    "role": "Faculty Advisor",
+    "department": "IT",
     "designation": "Associate Professor",
-    "image": "/images/members/placeholder.jpg",
+    "image": "/images/faculty/kishore_raju_sir.jpg",
     "email": "faculty@srkr.ac.in"
   },
   {
     "id": "faculty-002",
-    "name": "Prof. Co-Coordinator",
-    "role": "Co-Coordinator",
-    "department": "CSE",
+    "name": "Dr.I.Hemalatha",
+    "role": "Faculty Advisor",
+    "department": "IT",
+    "designation": "Professor",
+    "image": "/images/faculty/hemalatha_mam.jpg",
+    "email": "faculty@srkr.ac.in"
+  },
+  {
+    "id": "faculty-003",
+    "name": "Mrs.SRIPADA V S S LAKSHMI",
+    "role": "Faculty Coordinator",
+    "department": "IT",
     "designation": "Assistant Professor",
-    "image": "/images/members/placeholder.jpg",
-    "email": "cocoordinator@srkr.ac.in"
+    "image": "/images/faculty/lakshmi_mam.jpg",
+    "email": "faculty@srkr.ac.in"
+  },
+  {
+    "id": "faculty-004",
+    "name": "M S RADHA MANGA MANI",
+    "role": "Faculty Coordinator",
+    "department": "IT",
+    "designation": "Assistant Professor",
+    "image": "/images/faculty/radha_mam.jpg",
+    "email": "faculty@srkr.ac.in"
   }
 ]
