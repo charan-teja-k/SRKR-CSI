@@ -1,12 +1,11 @@
 import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, type Variants } from 'framer-motion';
-import { ArrowRight, Code, Users, Award, ChevronRight } from 'lucide-react';
+import { ArrowRight, Code, Users, Award } from 'lucide-react';
 import PixelBlast from '../components/PixelBlast';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { Navbar } from '../components/layout';
-import KineticFooter from '../components/KineticFooter';
+
 
 // --- Utility for cleaner classes ---
 function cn(...inputs: ClassValue[]) {

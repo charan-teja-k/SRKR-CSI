@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { PageHeader } from '../components/layout';
+
 import { MemberCard, HierarchyTree } from '../components/members';
 import facultyData from '../data/faculty.json';
 import sbmData from '../data/sbm_members.json';

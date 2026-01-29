@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Button } from '../components/common';
+
 
 const JoinCSI: React.FC = () => {
   return (

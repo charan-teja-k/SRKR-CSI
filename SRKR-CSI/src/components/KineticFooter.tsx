@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Linkedin, Instagram, Github, Twitter } from 'lucide-react';
@@ -7,8 +7,7 @@ const KineticFooter = () => {
   const currentYear = new Date().getFullYear();
   
   // UPDATED: 3x3 Grid (9 items total)
-  const rows = 3;
-  const cols = 3; 
+  
   // Pattern: C S I repeating
   const chars = ["C", "S", "I", "C", "S", "I", "C", "S", "I"];
 

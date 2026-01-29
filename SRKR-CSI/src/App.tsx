@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Navbar, Footer } from './components/layout';
+import { Navbar, } from './components/layout';
 import { Home, About, Events, EventDetails, Members, NotFound } from './pages';
 import { useScrollToTop } from './hooks';
 import JoinCSI from './pages/JoinCSI';
