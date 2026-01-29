@@ -67,7 +67,7 @@ const KineticFooter = () => {
           <div className="absolute inset-0 bg-blue-600/10 blur-[100px] rounded-full pointer-events-none" />
           
           {/* UPDATED: 3 cols grid */}
-          <div className="grid grid-cols-3 gap-4 p-4 relative z-10 mr-28">
+          <div className="grid grid-cols-3 gap-4 p-4 relative z-10 mr-0 md:mr-28">
             {chars.map((char, i) => (
               <FlipChar key={i} char={char} delay={i * 0.05} />
             ))}
