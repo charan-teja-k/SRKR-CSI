@@ -1,6 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+
+
+
+
+
 import { 
   Target, 
   Lightbulb, 
@@ -8,14 +12,24 @@ import {
   Globe, 
   Award, 
   BookOpen,
-  ArrowRight
+  
 } from 'lucide-react';
 
 // --- Animations ---
+import { easeOut } from "framer-motion";
+
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.6, 
+      ease: easeOut   // ✅ correct
+    } 
+  }
 };
+
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -229,7 +243,7 @@ const About: React.FC = () => {
               <div className="md:w-1/3 flex justify-center">
                  {/* Decorative Icon Graphic */}
                  <div className="w-40 h-40 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-blue-500/20">
-                    <img src="/logo-placeholder.png" alt="CSI Logo" className="w-24 h-24 opacity-90 invert" />
+                    <img src="/logos/csi_logo.png" alt="CSI Logo" className="w-40 h-40 " />
                     {/* Note: Replace src with actual CSI logo path if available, or keep as stylized text */}
                     <span className="sr-only">CSI Logo</span>
                  </div>
