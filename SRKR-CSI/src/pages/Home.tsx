@@ -160,21 +160,24 @@ const Home: React.FC = () => {
                             className="text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-[0.9] tracking-tighter"
 >
                             SRKR{' '}
-                            <span className="text-transparent bg-clip-text bg-[#2563EB] animate-gradient-x [-webkit-text-stroke:0.5px_white]">CSI</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 [-webkit-text-stroke:0.5px_white]">CSI</span>
 
                                 <br />
-                                <span className="text-4xl md:text-5xl lg:text-6xl text-gray-400 font-medium block mt-2">
+                               
+                                {/* Student Chapter */}
+                                <span className="mt-4 text-4xl md:text-5xl lg:text-6xl text-slate-200 font-semibold tracking-wide block">
                                     Student Chapter
                                 </span>
-                            </motion.h1>
+                                </motion.h1>
 
+                                {/* Paragraph Description */}
+                                <motion.p
+                                    variants={fadeInUp}
+                                    className="text-lg md:text-2xl text-blue-100/90 mb-12 max-w-2xl mx-auto leading-relaxed font-light"
+                                >
+                                    Architecting the future of technology through student leadership, innovation, and community-driven development.
+                                </motion.p>
 
-                        <motion.p
-                            variants={fadeInUp}
-                            className="text-lg md:text-2xl text-gray-300/80 mb-12 max-w-2xl mx-auto leading-relaxed"
-                        >
-                            Architecting the future of technology through student leadership, innovation, and community-driven development.
-                        </motion.p>
 
                         <motion.div
                             variants={fadeInUp}
@@ -186,11 +189,11 @@ const Home: React.FC = () => {
 
                         <motion.div
                             variants={fadeInUp}
-                            className="mt-20 pt-10 border-t border-white/5 grid grid-cols-3 gap-4 max-w-3xl mx-auto pointer-events-auto bg-black/20 backdrop-blur-sm rounded-2xl"
+                            className="mt-20 pt-2 pb-2 border-t border-white/5 grid grid-cols-2 gap-4 max-w-3xl mx-auto pointer-events-auto bg-black/20 backdrop-blur-sm rounded-2xl"
                         >
                             <StatItem value="500+" label="Members" />
                             <StatItem value="50+" label="Events" />
-                            <StatItem value="24/7" label="Support" />
+                            
                         </motion.div>
                     </motion.div>
                 </section>

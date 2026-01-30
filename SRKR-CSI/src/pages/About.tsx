@@ -1,10 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
-
-
-
-
 import { 
   Target, 
   Lightbulb, 
@@ -250,6 +245,133 @@ const About: React.FC = () => {
               </div>
            </div>
         </div>
+
+
+        {/* --- CSI STUDENT BRANCH AT SRKR --- */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          variants={staggerContainer}
+          className="mb-32"
+        >
+          <div className="text-center mb-16">
+            <motion.div variants={fadeInUp} className="inline-block px-4 py-1.5 mb-6 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-400 text-sm font-semibold tracking-wide uppercase">
+              SRKR Chapter
+            </motion.div>
+            <motion.h2 variants={fadeInUp} className="text-4xl md:text-5xl font-bold mb-4">
+              CSI Student Branch at <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">SRKR</span>
+            </motion.h2>
+            <motion.p variants={fadeInUp} className="text-gray-400 max-w-3xl mx-auto text-lg">
+              Empowering students at Sagi Rama Krishnam Raju Engineering College through technical excellence and professional development
+            </motion.p>
+          </div>
+
+          <motion.div variants={fadeInUp} className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* Establishment & Mission */}
+            <div className="group relative p-8 md:p-12 rounded-3xl bg-gray-900/50 border border-white/5 overflow-hidden hover:border-purple-500/30 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-4 text-purple-400">Establishment & Purpose</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  The CSI Student Branch at SRKR was established as part of the institution's initiative to promote professional engagement and technical development among students in computing and information technology disciplines. We function as a platform for organizing technical, academic, and co-curricular activities that extend beyond the regular curriculum.
+                </p>
+              </div>
+            </div>
+
+            {/* Activities & Focus */}
+            <div className="group relative p-8 md:p-12 rounded-3xl bg-gray-900/50 border border-white/5 overflow-hidden hover:border-blue-500/30 transition-all duration-300">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <h3 className="text-2xl font-bold mb-4 text-blue-400">Core Activities</h3>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0" />
+                    Technical workshops and skill development programs
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0" />
+                    Coding competitions and technical contests
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0" />
+                    Guest lectures and expert talks
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0" />
+                    Project exhibitions and hackathons
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Flagship Events */}
+          <motion.div variants={fadeInUp} className="mb-12">
+            <h3 className="text-3xl font-bold mb-8 text-center">Flagship Events</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Hack N Clash */}
+              <div className="group relative p-8 md:p-10 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-blue-500/30 transition-all duration-300">
+                <div className="mb-4 w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                  <Award className="w-6 h-6 text-blue-400" />
+                </div>
+                <h4 className="text-xl font-bold mb-3">Hack 'N' Clash</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  A coding competition focused on improving programming skills, logical thinking, and competitive problem-solving abilities. The event brings together students from multiple departments for collaborative and time-bound coding challenges.
+                </p>
+              </div>
+
+              {/* Prakriti Quest */}
+              <div className="group relative p-8 md:p-10 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-green-500/30 transition-all duration-300">
+                <div className="mb-4 w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
+                  <Globe className="w-6 h-6 text-green-400" />
+                </div>
+                <h4 className="text-xl font-bold mb-3">Prakriti Quest</h4>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  Smart Farming Innovation Expo encouraging students to develop technology-based solutions for agriculture and sustainability. Highlights the application of data analysis, automation, and system design to real-world societal problems.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Impact & Contributions */}
+          <motion.div variants={fadeInUp} className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-2xl p-10 md:p-12 border border-white/5">
+            <h3 className="text-2xl font-bold mb-6">Our Impact & Contributions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-300">
+              <div>
+                <h4 className="font-semibold mb-2 text-purple-300">Technical Learning</h4>
+                <p className="text-sm leading-relaxed">
+                  Regular workshops on programming, web development, data analytics, machine learning, and emerging technologies to supplement classroom learning.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-blue-300">Professional Engagement</h4>
+                <p className="text-sm leading-relaxed">
+                  Guest lectures and expert talks by industry professionals and academicians providing insights into emerging trends and career opportunities.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-purple-300">Skill Enhancement</h4>
+                <p className="text-sm leading-relaxed">
+                  Coding contests, technical quizzes, and project demonstrations aimed at enhancing analytical skills and fostering peer learning.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-2 text-blue-300">Innovation & Collaboration</h4>
+                <p className="text-sm leading-relaxed">
+                  Project exhibitions encouraging innovation and interdisciplinary collaboration among students of different programmes.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Vision Forward */}
+          <motion.div variants={fadeInUp} className="mt-12 text-center">
+            <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+              The CSI Student Branch at SRKR continues to function as an active professional body, supporting student participation in technical events and contributing to the institution's academic and professional ecosystem through sustained and structured activities. We remain committed to bridging the gap between education and industry, preparing the next generation of IT leaders.
+            </p>
+          </motion.div>
+        </motion.div>
 
         
 
