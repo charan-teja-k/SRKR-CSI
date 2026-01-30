@@ -14,29 +14,53 @@ interface HierarchyTreeProps {
 
 const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
   
-  // Card Component - Transparent & Blended
-  const MemberNode: React.FC<{ member: Member; isCompact?: boolean; align?: 'left' | 'right' | 'center' }> = ({ member, isCompact, align = 'center' }) => (
-    <div className={`relative flex ${isCompact ? `flex-row items-center ${align === 'right' ? 'flex-row-reverse text-right' : 'text-left'}` : 'flex-col items-center text-center'} z-10 group`}>
-      
-      {/* Image with subtle glow */}
-      <div className="relative flex-shrink-0">
-        <div className="absolute inset-0 rounded-full bg-blue-500 blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-        <img
-          src={member.image}
-          alt={member.name}
-          className={`${isCompact ? 'w-16 h-16' : 'w-24 h-24'} relative rounded-full border-2 border-blue-400/50 object-cover shadow-lg`}
-        />
-      </div>
+    // Card Component - Transparent & Blended
+  const MemberNode: React.FC<{ member: Member; isCompact?: boolean; align?: 'left' | 'right' | 'center' }> = ({ member, isCompact, align = 'center' }) => {
+    
+    // Default Mobile Styles (Image Left, Text Right)
+    let wrapperClass = "relative flex z-10 group items-center";
+    let textMarginClass = "";
 
-      {/* Text Content */}
-      <div className={isCompact ? (align === 'right' ? 'mr-4' : 'ml-4') : 'mt-3'}>
-        <p className={`${isCompact ? 'text-lg' : 'text-10xl'} font-semibold text-white tracking-wide drop-shadow-md whitespace-nowrap`}>
-          {member.name}
-        </p>
-        <p className="text-sm text-blue-200 font-medium uppercase tracking-wider opacity-80">{member.role}</p>
+    if (isCompact) {
+      // --- EBM Logic ---
+      wrapperClass += " flex-row text-left"; // Mobile Default
+      textMarginClass += " ml-4";            // Mobile Default Gap
+
+      // Desktop Overrides
+      if (align === 'right') {
+        // Left Column on Desktop: Image on Right, Text on Left
+        wrapperClass += " md:flex-row-reverse md:text-right"; 
+        textMarginClass += " md:ml-0 md:mr-4"; // Swap margin to right side
+      }
+    } else {
+      // --- Faculty/SBM Logic ---
+      wrapperClass += " flex-col text-center";
+      textMarginClass += " mt-3";
+    }
+
+    return (
+      <div className={wrapperClass}>
+        {/* Image with subtle glow */}
+        <div className="relative flex-shrink-0">
+          <div className="absolute inset-0 rounded-full bg-blue-500 blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
+          <img
+            src={member.image}
+            alt={member.name}
+            className={`${isCompact ? 'w-16 h-16' : 'w-24 h-24'} relative rounded-full border-2 border-blue-400/50 object-cover shadow-lg`}
+          />
+        </div>
+
+        {/* Text Content */}
+        <div className={textMarginClass}>
+          <p className={`${isCompact ? 'text-lg' : 'text-xl'} font-semibold text-white tracking-wide drop-shadow-md whitespace-normal break-words max-w-[200px] md:max-w-none`}>
+            {member.name}
+          </p>
+          <p className="text-sm text-blue-200 font-medium uppercase tracking-wider opacity-80">{member.role}</p>
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
+
 
   return (
     <div className="w-full flex flex-col items-center py-10 overflow-x-hidden">
@@ -62,45 +86,35 @@ const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
       </div>
 
       {/* ================= LEVEL 3: EXECUTIVE BODY (Fixed Pairs) ================= */}
-      <div className="relative flex flex-col items-center w-full max-w-6xl px-4">
-         <h3 className="text-xl font-bold text-blue-200 mb-12 uppercase tracking-[0.2em] drop-shadow-sm z-20">Executive Body Members</h3>
+<div className="relative flex flex-col items-center w-full max-w-6xl px-2 md:px-4"> {/* Reduced px */}
+    <h3 className="text-xl font-bold text-blue-200 mb-12 uppercase tracking-[0.2em] drop-shadow-sm z-20 text-center">Executive Body Members</h3>
 
-         {/* Central Spine (Only for EBM) */}
-         <div className="absolute top-20 bottom-0 left-8 md:left-1/2 w-0.5 bg-blue-600/30 md:-translate-x-1/2" />
+    {/* Central Spine */}
+    <div className="absolute top-20 bottom-0 left-4 md:left-1/2 w-0.5 bg-blue-600/30 md:-translate-x-1/2" />
 
-         {/* 
-            Grid Logic Fixed: 
-            - grid-cols-2 allows items to naturally flow Left -> Right -> Left -> Right
-            - Index 0 = Left Col, Index 1 = Right Col
-         */}
-         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-12 md:gap-x-0 relative">
-            {ebm.map((member, index) => {
-              const isLeftColumn = index % 2 === 0; 
-              
-              return (
-                <div key={index} className={`relative flex items-center
-                  ${isLeftColumn 
-                    ? 'md:justify-end md:pr-16'  // Left Column: Align content to right (towards spine)
-                    : 'md:justify-start md:pl-16' // Right Column: Align content to left (towards spine)
-                  }
-                  justify-start pl-20 md:pl-0`} // Mobile: Always align left with padding
-                >
-                  
-                
-                 
-
-                  {/* Member Card */}
-                  <MemberNode 
-                    member={member} 
-                    isCompact={true} 
-                    // Left Column members text-align Right. Right Column members text-align Left.
-                    align={isLeftColumn ? 'right' : 'left'} 
-                  />
-                </div>
-              );
-            })}
-         </div>
-      </div>
+    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-12 relative">
+    {ebm.map((member, index) => {
+        const isLeftColumn = index % 2 === 0;
+        
+        return (
+        <div key={index} className={`relative flex items-center
+            ${isLeftColumn 
+            ? 'md:justify-end md:pr-16' 
+            : 'md:justify-start md:pl-16' 
+            }
+            justify-start pl-8 md:pl-0`} // Reduced mobile padding from pl-20 to pl-8
+        >
+            <MemberNode 
+            member={member} 
+            isCompact={true} 
+            // Force left align on mobile, alternate on desktop
+             align={isLeftColumn ? 'right' : 'left'}
+            />
+        </div>
+        );
+    })}
+    </div>
+</div>
 
     </div>
   );

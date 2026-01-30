@@ -116,29 +116,30 @@ const Home: React.FC = () => {
         <div ref={containerRef} className="relative min-h-screen min-w-full overflow-x-hidden selection:bg-blue-500/30">
 
             {/* --- 1. Fixed Interactive Background --- */}
-            <div className="fixed inset-0 z-0 bg-gray-900 pointer-events-auto px-0">
-                <PixelBlast
-                    variant="square"
-                    pixelSize={6}
-                    color="#2f6de8"
-                    patternScale={4}
-                    patternDensity={1}
-                    pixelSizeJitter={0}
-                    enableRipples
-                    rippleSpeed={0.3}
-                    rippleThickness={0.12}
-                    rippleIntensityScale={1.5}
-                    liquid={false}
-                    liquidStrength={0.12}
-                    liquidRadius={1.2}
-                    liquidWobbleSpeed={4}
-                    speed={0.3}
-                    edgeFade={0.15}
-                    transparent
-                />
-                <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-[1] pointer-events-none" />
-                <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 via-transparent to-gray-900 z-[1] pointer-events-none" />
-            </div>
+<div className="fixed inset-0 z-0 bg-gray-900 pointer-events-auto">
+    <PixelBlast
+        variant="square"
+        pixelSize={6}
+        color="#2f6de8"
+        patternScale={4}
+        patternDensity={1}
+        pixelSizeJitter={0}
+        enableRipples
+        rippleSpeed={0.3}
+        rippleThickness={0.12}
+        rippleIntensityScale={1.5}
+        liquid={false}
+        liquidStrength={0.12}
+        liquidRadius={1.2}
+        liquidWobbleSpeed={4}
+        speed={0.3}
+        edgeFade={0.15}
+        transparent
+        style={{ width: '100%', height: '100%' }} // Add this
+    />
+    <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay z-[1] pointer-events-none" />
+    <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 via-transparent to-gray-900 z-[1] pointer-events-none" />
+</div>
 
             {/* --- 2. Scrollable Content Wrapper --- */}
             <div className="relative z-10 pointer-events-none">
