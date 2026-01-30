@@ -7,12 +7,13 @@ interface Member {
 }
 
 interface HierarchyTreeProps {
+  hod?: Member[]; // New Prop for HOD
   faculty: Member[];
   sbm: Member[];
   ebm: Member[];
 }
 
-const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
+const HierarchyTree: React.FC<HierarchyTreeProps> = ({ hod, faculty, sbm, ebm }) => {
   
     // Card Component - Transparent & Blended
   const MemberNode: React.FC<{ member: Member; isCompact?: boolean; align?: 'left' | 'right' | 'center' }> = ({ member, isCompact, align = 'center' }) => {
@@ -52,7 +53,7 @@ const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
 
         {/* Text Content */}
         <div className={textMarginClass}>
-          <p className={`${isCompact ? 'text-lg' : 'text-xl'} font-semibold text-white tracking-wide drop-shadow-md whitespace-normal break-words max-w-[200px] md:max-w-none`}>
+          <p className={`${isCompact ? 'text-lg' : 'text-0.5xl'} font-semibold text-white tracking-wide drop-shadow-md whitespace-normal break-words max-w-[200px] md:max-w-none`}>
             {member.name}
           </p>
           <p className="text-sm text-blue-200 font-medium uppercase tracking-wider opacity-80">{member.role}</p>
@@ -61,10 +62,24 @@ const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
     );
   };
 
-
   return (
     <div className="w-full flex flex-col items-center py-10 overflow-x-hidden">
       
+      {/* ================= LEVEL 0: HOD ================= */}
+      {hod && hod.length > 0 && (
+        <div className="flex flex-col items-center w-full mb-12">
+           {/* You can change this title or remove it if you want it merged with Faculty */}
+          <h3 className="text-xl font-bold text-blue-200 mb-8 uppercase tracking-[0.2em] drop-shadow-sm">Head of The Department</h3>
+          <div className="flex justify-center relative z-10">
+            {hod.map((member, index) => (
+              <MemberNode key={index} member={member} />
+            ))}
+          </div>
+          {/* Connector Line to Faculty */}
+          <div className="w-0.5 h-12 bg-blue-500/30 mt-4"></div>
+        </div>
+      )}
+
       {/* ================= LEVEL 1: FACULTY ================= */}
       <div className="flex flex-col items-center w-full mb-16">
         <h3 className="text-xl font-bold text-blue-200 mb-8 uppercase tracking-[0.2em] drop-shadow-sm">Faculty</h3>
@@ -86,35 +101,34 @@ const HierarchyTree: React.FC<HierarchyTreeProps> = ({ faculty, sbm, ebm }) => {
       </div>
 
       {/* ================= LEVEL 3: EXECUTIVE BODY (Fixed Pairs) ================= */}
-<div className="relative flex flex-col items-center w-full max-w-6xl px-2 md:px-4"> {/* Reduced px */}
-    <h3 className="text-xl font-bold text-blue-200 mb-12 uppercase tracking-[0.2em] drop-shadow-sm z-20 text-center">Executive Body Members</h3>
+      <div className="relative flex flex-col items-center w-full max-w-6xl px-2 md:px-4">
+        <h3 className="text-xl font-bold text-blue-200 mb-12 uppercase tracking-[0.2em] drop-shadow-sm z-20 text-center">Executive Body Members</h3>
 
-    {/* Central Spine */}
-    <div className="absolute top-20 bottom-0 left-4 md:left-1/2 w-0.5 bg-blue-600/30 md:-translate-x-1/2" />
+        {/* Central Spine */}
+        <div className="absolute top-20 bottom-0 left-4 md:left-1/2 w-0.5 bg-blue-600/30 md:-translate-x-1/2" />
 
-    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-12 relative">
-    {ebm.map((member, index) => {
-        const isLeftColumn = index % 2 === 0;
-        
-        return (
-        <div key={index} className={`relative flex items-center
-            ${isLeftColumn 
-            ? 'md:justify-end md:pr-16' 
-            : 'md:justify-start md:pl-16' 
-            }
-            justify-start pl-8 md:pl-0`} // Reduced mobile padding from pl-20 to pl-8
-        >
-            <MemberNode 
-            member={member} 
-            isCompact={true} 
-            // Force left align on mobile, alternate on desktop
-             align={isLeftColumn ? 'right' : 'left'}
-            />
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-y-8 md:gap-y-12 relative">
+          {ebm.map((member, index) => {
+            const isLeftColumn = index % 2 === 0;
+            
+            return (
+              <div key={index} className={`relative flex items-center
+                ${isLeftColumn 
+                  ? 'md:justify-end md:pr-16' 
+                  : 'md:justify-start md:pl-16' 
+                }
+                justify-start pl-8 md:pl-0`}
+              >
+                <MemberNode 
+                  member={member} 
+                  isCompact={true} 
+                  align={isLeftColumn ? 'right' : 'left'}
+                />
+              </div>
+            );
+          })}
         </div>
-        );
-    })}
-    </div>
-</div>
+      </div>
 
     </div>
   );

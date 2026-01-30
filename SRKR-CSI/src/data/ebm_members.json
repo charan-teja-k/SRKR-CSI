@@ -2,235 +2,91 @@
   {
     "id": "ebm-001",
     "name": "K Charan Teja",
-    "role": "Technical Lead",
-    "department": "CSBS",
+    "branch": "CSBS",
     "image": "/images/EBMS/charan_be.jpeg",
     "linkedin": "https://linkedin.com/in/charan-teja-kambala",
-    "email": "charanteja.kambala4@gmail.com"
+    "email": "charanteja.kambala4@gmail.com",
+    "role":"EBM"
+  },
+  {
+    "id": "ebm-001",
+    "name": "Khaja Vali Shaik",
+    "branch": "AIDS",
+    "image": "/images/EBMS/Khaja Vali Shaik.jpg",
+    "linkedin": "https://www.linkedin.com/in/khajavalishaik1",
+    "email": "skkhajavaliskkhajavali701@gmail.com",
+    "role": "EBM"
   },
   {
     "id": "ebm-002",
-    "name": "Event Coordinator",
-    "role": "Event Coordinator",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "events@srkrcsi.org"
+    "name": "Susanth Bhatta",
+    "branch": "IT",
+    "image": "/images/EBMS/Susanth Bhatta.jpg",
+    "linkedin": "https://www.linkedin.com/in/susanth-bhatta-6a14252b8",
+    "email": "susanthbhatta@gmail.com",
+    "role": "EBM"
   },
   {
     "id": "ebm-003",
-    "name": "Design Lead",
-    "role": "Design Lead",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "design@srkrcsi.org"
+    "name": "Mandapati Satya Nivas",
+    "branch": "AIDS",
+    "image": "/images/EBMS/Satya nivas.JPG",
+    "linkedin": "https://www.linkedin.com/in/satyanivas",
+    "email": "satyanivas2345@gmail.com",
+    "role": "EBM"
   },
   {
     "id": "ebm-004",
-    "name": "Social Media Manager",
-    "role": "Social Media Manager",
-    "department": "ECE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "social@srkrcsi.org"
+    "name": "Shaik Mahammad Rafi",
+    "branch": "IT",
+    "image": "/images/EBMS/Rafi.jpg",
+    "linkedin": "https://in.linkedin.com/in/shaikmhammadrafi",
+    "email": "shaikmahammadrafi1617@gmail.com",
+    "role": "EBM"
   },
   {
     "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
+    "name": "Vepada Yamuna",
+    "branch": "IT",
+    "image": "/images/EBMS/Yamuna.jpeg",
+    "linkedin": "https://www.linkedin.com/in/v-yamuna",
+    "email": "yamunav32006@gmail.com",
+    "role": "EBM"
   },
   {
     "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
+    "name": "Utla Udaya Konda Naga Siddhardha",
+    "branch": "IT",
+    "image": "/images/EBMS/Siddhardha Utla.jpg",
+    "linkedin": "https://www.linkedin.com/in/siddhardha-utla-24b039317?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "email": "siddhardhautla19@gmail.com",
+    "role": "EBM"
   },
   {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
+    "id": "ebm-007",
+    "name": "Akula Narasimha Sai Karthikeya",
+    "branch": "CSBS",
+    "image": "/images/EBMS/Akula Karthikeya.jpg",
+    "linkedin": "https://www.linkedin.com/in/akula-narasimha-sai-karthikeya-8b025a29b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "email": "akulakarthikeya2005@gmail.com",
+    "role": "EBM"
   },
   {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
+    "id": "ebm-008",
+    "name": "Bhavya Sree Pasumarthi",
+    "branch": "AIDS",
+    "image": "/images/EBMS/Bhavya.jpg",
+    "linkedin": "https://linkedin.com/in/bhavyasree1",
+    "email": "pasumarthibhavyasree216@gmail.com",
+    "role": "EBM"
   },
   {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
-  },
-  {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
-  },
-  {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
-  },
-  {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
-  },
-  {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
-  },
-  {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
-  },
-  {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
-  },
-   {
-    "id": "ebm-005",
-    "name": "Content Writer",
-    "role": "Content Writer",
-    "department": "CSE",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "content@srkrcsi.org"
-  },
-  {
-    "id": "ebm-006",
-    "name": "Documentation Lead",
-    "role": "Documentation Lead",
-    "department": "IT",
-    "image": "/images/members/placeholder.jpg",
-    "linkedin": "https://linkedin.com/in/",
-    "email": "docs@srkrcsi.org"
+    "id": "ebm-009",
+    "name": "Puppala venkata subbarao sai karthikeya",
+    "branch": "AIDS",
+    "image": "/images/EBMS/Puppala venkata subbarao sai karthikeya.jpg",
+    "linkedin": "https://www.linkedin.com/in/pvss-karthikeya?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "email": "puppalasaikarthikeya@gmail.com",
+    "role": "EBM"
   }
 ]

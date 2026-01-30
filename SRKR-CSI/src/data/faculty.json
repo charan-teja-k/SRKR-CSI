@@ -1,4 +1,5 @@
 [
+ 
   {
     "id": "faculty-001",
     "name": "Dr. K. Kishore Raju",
@@ -6,6 +7,17 @@
     "department": "IT",
     "designation": "Associate Professor",
     "image": "/images/faculty/kishore_raju_sir.jpg",
+    "email": "faculty@srkr.ac.in"
+  },
+   {
+    "id": "HOD-001",
+    "name": "Dr. Ravi Kiran Varma",
+    "role": "Head of The Department",
+    "designation": "Professor",
+    "image": "/images/faculty/hod.jpg",
+    "department": "IT",
+    
+    
     "email": "faculty@srkr.ac.in"
   },
   {

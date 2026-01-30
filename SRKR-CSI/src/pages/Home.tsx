@@ -208,7 +208,7 @@ const Home: React.FC = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
-                            Why Join <span className="text-blue-500">CSI?</span>
+                            Why Join <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">CSI?</span>
                         </h2>
                         <p className="text-gray-400 max-w-xl mx-auto">
                             We provide the platform, you bring the passion. Here is how we help you accelerate your career.

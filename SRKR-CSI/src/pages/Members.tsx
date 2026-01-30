@@ -18,18 +18,22 @@ const Members: React.FC = () => {
     { key: 'ebm', label: 'Executive Body' },
   ];
 
+  // --- Logic to separate HOD from other Faculty ---
+  // Assuming the HOD's role contains "Head" (e.g., "Head of Department").
+  // If your JSON uses a different role title, adjust the string "Head" below.
+  const hodMembers = facultyData.filter(f => f.role.toLowerCase().includes("head"));
+  const facultyCoordinators = facultyData.filter(f => !f.role.toLowerCase().includes("head"));
+
   return (
-    // FIX: Removed 'overflow-hidden' from here to allow page scroll, 
-    // but kept background fixed to screen to avoid sharp edges.
     <div className="relative min-h-screen w-full bg-[#111828]">
       
-      {/* Background Layers - Fixed to Viewport */}
+      {/* Background Layers */}
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0">
         <div className="gradient-layer-1 absolute inset-0" />
         <div className="gradient-layer-2 absolute inset-0" />
       </div>
 
-      {/* Content Container - Scrollable Area */}
+      {/* Content Container */}
       <div className="relative z-10 pt-24 pb-16">
         
         {/* Header Section */}
@@ -48,10 +52,6 @@ const Members: React.FC = () => {
           
           {/* Responsive Tab Switcher */}
           <div className="flex justify-center mb-12">
-            {/* 
-              FIX: Added 'overflow-x-auto' and 'max-w-full' to make tabs scrollable on mobile.
-              Added 'no-scrollbar' to hide the scrollbar (ensure you have this utility in index.css).
-            */}
             <div className="bg-white/10 backdrop-blur-md p-1.5 rounded-2xl border border-white/10 inline-flex relative max-w-full overflow-x-auto no-scrollbar">
               {tabs.map((tab) => (
                 <button
@@ -86,9 +86,16 @@ const Members: React.FC = () => {
             {activeTab === 'hierarchy' && (
               <div className="text-white-100 overflow-x-hidden"> 
                 <HierarchyTree
-                  faculty={facultyData.map((f) => ({ name: f.name, role: f.role, image: f.image }))}
+                  // Pass HOD members separately
+                  hod={hodMembers.map((f) => ({ name: f.name, role: f.role, image: f.image }))}
+                  // Pass remaining faculty
+                  faculty={facultyCoordinators.map((f) => ({ name: f.name, role: f.role, image: f.image }))}
                   sbm={sbmData.map((m) => ({ name: m.name, role: m.role, image: m.image }))}
-                  ebm={ebmData.map((m) => ({ name: m.name, role: m.role, image: m.image }))}
+                  ebm={ebmData.map((m) => ({ 
+                    name: m.name, 
+                    role: m.branch, // Maps branch to role for display in tree
+                    image: m.image 
+                  }))}
                 />
               </div>
             )}
@@ -144,9 +151,9 @@ const Members: React.FC = () => {
                     <MemberCard
                       key={member.id}
                       name={member.name}
-                      role={member.role}
+                      role="Executive Body Member" 
+                      department={member.branch}
                       image={member.image}
-                      department={member.department}
                       linkedin={member.linkedin}
                       email={member.email}
                     />
