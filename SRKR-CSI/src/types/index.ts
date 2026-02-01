@@ -18,6 +18,7 @@ export interface Event {
   id: string | number;
   title: string;
   year: string; // e.g., "2025"
+  academicYear?: string; // e.g., "2024-2025"
   date: string; // Format: "dd-mm-yyyy"
   month?: string;
   category?: string;

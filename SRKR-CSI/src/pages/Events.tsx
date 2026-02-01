@@ -5,7 +5,12 @@ import eventsDataRaw from '../data/events.json';
 import { type Event, type EventYear } from '../types';
 
 const eventsData: EventYear[] = (eventsDataRaw as any).years;
-const allEvents: Event[] = eventsData.flatMap(yearGroup => yearGroup.events);
+const allEvents: Event[] = eventsData.flatMap(yearGroup => 
+  yearGroup.events.map(event => ({
+    ...event,
+    academicYear: yearGroup.academicYear
+  }))
+);
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -19,11 +24,15 @@ const fadeInUp = {
 const Events: React.FC = () => {
   const [selectedYear, setSelectedYear] = useState<string>('All');
 
-  const years: string[] = [
+  const academicYears: string[] = [
     'All',
     ...eventsData
-      .map(yearGroup => yearGroup.year)
-      .sort((a, b) => parseInt(b) - parseInt(a))
+      .map(yearGroup => yearGroup.academicYear)
+      .sort((a, b) => {
+        const aStart = parseInt(a.split('-')[0]);
+        const bStart = parseInt(b.split('-')[0]);
+        return bStart - aStart;
+      })
   ];
 
   const parseDate = (dateStr: string) => {
@@ -34,7 +43,7 @@ const Events: React.FC = () => {
 
   const filteredEvents: Event[] = (selectedYear === 'All'
     ? allEvents
-    : allEvents.filter((event) => event.year === selectedYear))
+    : allEvents.filter((event) => event.academicYear === selectedYear))
     .sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
   const containerVariants = {
@@ -109,7 +118,7 @@ const Events: React.FC = () => {
         {/* Year Filter */}
         <div className="flex justify-center mb-14">
           <div className="bg-slate-900/70 backdrop-blur-xl border border-white/10 p-2 rounded-2xl flex flex-wrap justify-center gap-2 shadow-[0_18px_60px_rgba(15,23,42,0.8)]">
-            {years.map((year) => (
+            {academicYears.map((year) => (
               <button
                 key={year}
                 onClick={() => setSelectedYear(year)}
@@ -127,7 +136,7 @@ const Events: React.FC = () => {
                   />
                 )}
                 <span className="relative z-10 font-['Poppins'] tracking-wide">
-                  {year === 'All' ? 'All Years' : `${year}-${parseInt(year) + 1}`}
+                  {year === 'All' ? 'All Years' : year}
                 </span>
               </button>
             ))}

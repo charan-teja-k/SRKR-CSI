@@ -173,7 +173,7 @@ const Home: React.FC = () => {
                                 {/* Paragraph Description */}
                                 <motion.p
                                     variants={fadeInUp}
-                                    className="text-lg md:text-2xl text-blue-100/90 mb-12 max-w-2xl mx-auto leading-relaxed font-light"
+                                    className="text-lg md:text-2xl text-white mb-12 max-w-2xl mx-auto leading-relaxed font-medium"
                                 >
                                     Architecting the future of technology through student leadership, innovation, and community-driven development.
                                 </motion.p>
