@@ -1,47 +1,174 @@
-[
-  {
-    "id": "event-001",
-    "title": "Tech Symposium 2025",
-    "description": "Annual technical symposium featuring coding competitions, workshops, and guest lectures from industry experts.",
-    "date": "2025-03-15",
-    "year": "2025",
-    "venue": "SRKR Engineering College Auditorium",
-    "images": [
-      "/images/events/tech-symposium-1.jpg",
-      "/images/events/tech-symposium-2.jpg"
-    ],
-    "winners": [
-      { "name": "John Doe", "position": "1st", "prize": "₹10,000" },
-      { "name": "Jane Smith", "position": "2nd", "prize": "₹5,000" },
-      { "name": "Alex Johnson", "position": "3rd", "prize": "₹3,000" }
-    ]
-  },
-  {
-    "id": "event-002",
-    "title": "Hackathon 2024",
-    "description": "24-hour coding marathon where students built innovative solutions for real-world problems.",
-    "date": "2024-11-20",
-    "year": "2024",
-    "venue": "CSE Department Lab",
-    "images": [
-      "/images/events/hackathon-1.jpg",
-      "/images/events/hackathon-2.jpg"
-    ],
-    "winners": [
-      { "name": "Team Alpha", "position": "1st", "prize": "₹15,000" },
-      { "name": "Team Beta", "position": "2nd", "prize": "₹10,000" }
-    ]
-  },
-  {
-    "id": "event-003",
-    "title": "Workshop on Cloud Computing",
-    "description": "Hands-on workshop covering AWS fundamentals, cloud architecture, and deployment strategies.",
-    "date": "2024-09-10",
-    "year": "2024",
-    "venue": "Seminar Hall",
-    "images": [
-      "/images/events/cloud-workshop-1.jpg"
-    ],
-    "winners": []
-  }
-]
+{
+  "years": [
+    {
+      "year": "2025",
+      "academicYear": "2024-2025",
+      "events": [
+        
+        {
+          "id": "event-devops-flowthon-2025",
+          "title": "DevOps Flowthon",
+          "description": "National-level 3-day DevOps workshop and 24-hour Flowthon covering CI/CD, automation, containerization, cloud deployment and a hands-on DevOps hackathon where teams implemented pipelines, automated infrastructure and deployed scalable applications.",
+          "shortDesc": "National-level DevOps workshop with CI/CD, Docker, Kubernetes, AWS, IaC and 24-hour hackathon",
+          "fullDescription": "A comprehensive 3-day DevOps workshop followed by a 24-hour Flowthon (hackathon) covering the complete DevOps lifecycle. Workshop topics include Git, Jenkins, Docker, Kubernetes, Terraform, AWS services (CodeCommit, CodePipeline, CodeBuild, CodeDeploy, CloudFormation), Infrastructure as Code, auto-scaling, and load balancing. The Flowthon involved 100 participants from 6 colleges competing to implement CI/CD pipelines, automate infrastructure, and deploy scalable applications. Conducted by Sai Pavan Velidandla, an experienced trainer with 13+ years of expertise.",
+          "date": "10-02-2025",
+          "year": "2025",
+          "month": "February",
+          "dateRange": {
+            "start": "10-02-2025",
+            "end": "14-02-2025"
+          },
+          "venue": "Digital Learning Center, EEE 4th Floor, SRKR Engineering College, Bhimavaram",
+          "location": "Chinamiram Rural, Bhimavaram, Andhra Pradesh, India",
+          "category": "workshop-hackathon",
+          "type": "Workshop + Hackathon",
+          "level": "National",
+          "department": "Department of Information Technology",
+          "organisingBody": "SRKR Engineering College (Autonomous), SRKREC CSI Student Branch in association with Brainovision Solutions India Pvt. Ltd.",
+          "thumbnail": "/images/events_thumbnail/devops-flowthon.png",
+          "images": [
+            "/images/event_images/Devops_Flowthon/devops_flowthon_1.jpg",
+            "/images/event_images/Devops_Flowthon/devops_flowthon_2.jpg",
+            "/images/event_images/Devops_Flowthon/devops_flowthon_3.jpg",
+            "/images/event_images/Devops_Flowthon/devops_flowthon_4.jpg"
+          ],
+          "participants": {
+            "total": 184,
+            "workshop": 84,
+            "flowthon": 100,
+            "collegesInvolved": [
+              "SRKR Engineering College",
+              "MVGR Engineering College",
+              "Sasi Institute of Technology and Engineering",
+              "VIT AP University",
+              "ANITS Vizag",
+              "SRM University AP"
+            ]
+          },
+          "prizePool": "₹30,000",
+          "resourcePerson": {
+            "name": "Sai Pavan Velidandla",
+            "designation": "Entrepreneur, Trainer, Inventor, Space Enthusiast",
+            "bio": "13+ years of training experience; trained 3.5 lakh+ professionals across corporates, universities and government bodies; expert in programming, full-stack, databases, cloud, no-code tools; creator of Derive Thinking and IQECC."
+          },
+          "facultyCoordinators": [
+            "V. Sai Baba (Assistant Professor, IT)",
+            "S. Suryanarayana Raju (Assistant Professor, IT)",
+            "Dr. I. Hemalatha (Professor, IT)",
+            "Dr. K. Kishore Raju (Associate Professor, IT)"
+          ],
+          "studentCoordinators": [
+            { "name": "M. Naga Lokesh (23B95A1212)", "role": "Coordinator" },
+            { "name": "B. Gokul (22B91A5413)", "role": "Coordinator" },
+            { "name": "A. Raja Chandhra (22B91A5405)", "role": "Coordinator" }
+          ],
+          "convenor": "Dr. P. Ravi Kiran Varma, Professor & HOD, IT",
+          "chiefPatrons": [
+            "Sri S. Prasad Raju (President, SRKREC)",
+            "Sri S.R.K. Nishant Varma (Secretary-cum-Correspondent, SRKREC)",
+            "Sri P. Krishnam Raju (Honorary Chairman, Governing Body Member)"
+          ],
+          "patrons": [
+            "Dr. M. Jagapathi Raju (Director, SRKREC)",
+            "Dr. K.S.V. Narasimha Raju (Governing Body Member, SRKREC)",
+            "Dr. K.V. Murali Krishnam Raju (Principal, SRKREC)",
+            "Sri S. Vital Ranga Raju (Vice President, SRKREC)",
+            "Sri G. Rama Raju (Vice President, SRKREC)",
+            "Sri S. Satya Pratik Varma (Governing Body Member, SRKREC)"
+          ],
+          "workshopOutline": {
+            "day1": {
+              "date": "10-02-2025",
+              "title": "DevOps Fundamentals & CI/CD Pipeline Setup",
+              "sessions": [
+                "Introduction to DevOps: definition, history, evolution, importance; DevOps lifecycle",
+                "Cloud computing overview: IaaS, PaaS, SaaS and AWS for DevOps",
+                "Tools overview: Git, Jenkins, Docker, Kubernetes, Terraform",
+                "Hands-on with Git and AWS account setup with IAM basics",
+                "CI/CD pipeline setup with Jenkins"
+              ]
+            },
+            "day2": {
+              "date": "11-02-2025",
+              "title": "AWS DevOps & Containerization",
+              "sessions": [
+                "DevOps on AWS: CodeCommit, CodePipeline, CodeBuild, CodeDeploy, CloudFormation",
+                "Containerization overview and introduction to Docker, Amazon ECS and EKS",
+                "Practical: Containerization with Docker",
+                "Deploy CI/CD pipeline on AWS using CodeBuild and CodeDeploy"
+              ]
+            },
+            "day3": {
+              "date": "12-02-2025",
+              "title": "Infrastructure as Code & Advanced Scaling",
+              "sessions": [
+                "Infrastructure as Code with Terraform and CloudFormation",
+                "Advanced scaling: auto-scaling groups, load balancing, Elastic Beanstalk",
+                "Practical: IaC deployment and auto-scaling setup",
+                "Hands-on with Elastic Beanstalk",
+                "Hackathon objectives and collaboration tips"
+              ]
+            }
+          },
+          "flowthonSchedule": {
+            "dates": ["13-02-2025", "14-02-2025"],
+            "duration": "24 hours",
+            "highlights": [
+              "24-hour continuous hacking with structured slots for development, mentoring, presentations and evaluation",
+              "Cultural/campfire session and entertainment program",
+              "Peer evaluation where teams assessed each other's solutions"
+            ]
+          },
+          "winners": [
+            {
+              "position": "1st",
+              "teamName": "VIT AP",
+              "prize": "₹15,000",
+              "members": [
+                { "name": "P. Hiren Sai", "registerNo": "21BCE9875", "college": "VIT AP" },
+                { "name": "S. Sai Vardhan Varudu", "registerNo": "21BCE9037", "college": "VIT AP" },
+                { "name": "K. Aditya", "registerNo": "21BCE9826", "college": "VIT AP" },
+                { "name": "P. Naga Mahendra", "registerNo": "21BCE9815", "college": "VIT AP" }
+              ]
+            },
+            {
+              "position": "2nd",
+              "teamName": "The Chosen",
+              "prize": "₹10,000",
+              "members": [
+                { "name": "G. Raj Kumar", "registerNo": "22K61A0538", "college": "SITE" },
+                { "name": "G. Abinaya Teja", "registerNo": "22K61A0533", "college": "SITE" },
+                { "name": "G. Sri Sunil", "registerNo": "22K61A0540", "college": "SITE" },
+                { "name": "G. Naga Siva Yaswanth", "registerNo": "22K61A0539", "college": "SITE" },
+                { "name": "J. Vijay Tarak", "registerNo": "22K61A0555", "college": "SITE" }
+              ]
+            }
+          ],
+          "registration": {
+            "workshopFee": "₹700 per participant",
+            "flowthonFee": "₹999 per person",
+            "comboFee": "₹1700 (₹200 discount for CSI registered members)",
+            "teamSizeFlowthon": "5 members per team"
+          },
+          "certificates": [
+            "Certificate of Participation for all active participants",
+            "Certificate of Excellence (Merit Certificate) for winning teams"
+          ],
+          "feedbackHighlights": [
+            "Participants appreciated the resource person's clear explanations and depth of DevOps content",
+            "Students reported successful deployment using IaC and CloudFormation",
+            "Organizing team was frequently described as supportive and responsive"
+          ]
+        }
+      ]
+    },
+    {
+      "year": "2024",
+      "academicYear": "2023-2024",
+      "events": [
+        
+        
+      ]
+    }
+  ]
+}
